@@ -2,9 +2,7 @@ import { defineConfig } from '@modern-js/runtime';
 import { useModuleApps } from '@modern-js/plugin-garfish/runtime';
 
 import { RouterProvider, Route, createBrowserRouter, createRoutesFromElements, BrowserRouter, Link, Outlet } from '@modern-js/runtime/router';
-import ErrorPage from './component/ErrorPage';
-import { ErrorBoundary } from './component/ErrorBoundary';
-import ProviderButton from 'provider/Button'
+
 import { useEffect, useState } from 'react';
 import { get as hello } from '@api/hello'
 const AppLayout = () => {
@@ -19,7 +17,6 @@ const AppLayout = () => {
             <div><Link to={'/table'}>Loading conventional routed sub-applications</Link></div>
             <div><Link to={'/dashboard'}>Loading Self-Controlled Routing Sub-Applications</Link></div>
             <div><Link to={'/'}>Uninstall a sub-application</Link></div>
-            {/* <ProviderButton /> */}
             <h1>{text}</h1>
             <Outlet />
         </>
