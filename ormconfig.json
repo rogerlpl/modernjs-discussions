@@ -1,0 +1,25 @@
+{
+    "type": "mssql",
+    "host": "tu-servidor",
+    "port": 1433,
+    "username": "tu-usuario",
+    "password": "tu-contraseña",
+    "database": "tu-base-de-datos",
+    "synchronize": true,
+    "logging": true,
+    "entities": [
+      "src/entities/**/*.ts"
+    ],
+    "migrations": [
+      "src/migrations/**/*.ts"
+    ],
+    "subscribers": [
+      "src/subscribers/**/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "src/entities",
+      "migrationsDir": "src/migrations",
+      "subscribersDir": "src/subscribers"
+    }
+  }
+  

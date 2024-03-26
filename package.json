@@ -1,0 +1,66 @@
+{
+  "name": "shell-boilerplate",
+  "version": "0.1.0",
+  "scripts": {
+    "reset": "npx rimraf ./**/node_modules",
+    "dev": "modern dev",
+    "build": "modern build",
+    "start": "modern start",
+    "serve": "modern serve",
+    "new": "modern new",
+    "lint": "modern lint",
+    "prepare": "husky install",
+    "upgrade": "modern upgrade"
+  },
+  "engines": {
+    "node": ">=16.18.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,mjs,cjs}": [
+      "node --max_old_space_size=8192 ./node_modules/eslint/bin/eslint.js --fix --color --cache --quiet"
+    ]
+  },
+  "eslintIgnore": [
+    "node_modules/",
+    "dist/"
+  ],
+  "dependencies": {
+    "@mantine/core": "^7.1.7",
+    "@mantine/dates": "^7.3.0",
+    "@mantine/form": "^7.3.0",
+    "@mantine/hooks": "^7.1.7",
+    "@mantine/notifications": "^7.1.7",
+    "@modern-js/plugin-bff": "2.48.3",
+    "@modern-js/plugin-express": "2.48.3",
+    "@modern-js/plugin-garfish": "2.48.3",
+    "@modern-js/runtime": "2.48.3",
+    "dayjs": "^1.11.10",
+    "devextreme": "^23.1.6",
+    "devextreme-react": "^23.1.6",
+    "express": "~4.18.2",
+    "mssql": "^10.0.1",
+    "prop-types": "^15.8.1",
+    "react": "~18.2.0",
+    "react-dom": "~18.2.0",
+    "react-icons": "^4.11.0",
+    "reflect-metadata": "^0.1.14",
+    "typeorm": "^0.3.17",
+    "zustand": "^4.4.6"
+  },
+  "devDependencies": {
+    "@modern-js-app/eslint-config": "2.48.3",
+    "@modern-js/app-tools": "2.48.3",
+    "@modern-js/eslint-config": "2.48.3",
+    "@modern-js/tsconfig": "2.48.3",
+    "@types/express": "~4.17.20",
+    "husky": "~8.0.1",
+    "lint-staged": "~13.1.0",
+    "postcss": "^8.4.31",
+    "postcss-preset-mantine": "^1.9.1",
+    "postcss-simple-vars": "^7.0.1",
+    "prettier": "~2.8.1",
+    "rimraf": "~3.0.2",
+    "ts-node": "~10.8.1",
+    "tsconfig-paths": "~3.14.1"
+  }
+}
