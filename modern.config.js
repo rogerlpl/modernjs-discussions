@@ -11,17 +11,11 @@ export default defineConfig({
   deploy: {
     microFrontend: true,
   },
-  dev: {
-    // set publicPath, la ip debe de ser la del desarrollador.
-    assetPrefix: process.env.DEV_ASSET_PREFIX,
-  },
   bff: {
-    // prefix: '/api/pokemon',
-    prefix: process.env.BFF_PREFIX,
+    prefix: '/api/pokemon',
   },
   server: {
-    // port: 3003,
-    port: process.env.SERVER_PORT,
+    port: 3003,
   },
   plugins: [appTools(), garfishPlugin(), bffPlugin(), expressPlugin()],
 });

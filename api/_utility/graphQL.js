@@ -52,11 +52,8 @@ export async function fetchGraphQL(operationsDoc, variables, operationName) {
   }
 
   // Continuamos con la solicitud GraphQL
-  const result = await fetch(process.env.GRAPHQL_ENDPOINT, {
+  const result = await fetch('https://beta.pokeapi.co/graphql/v1beta', {
     method: 'POST',
-    headers: {
-      'x-hasura-role': process.env.GRAPHQL_ROLE,
-    },
     body: JSON.stringify({
       query: operationsDoc,
       variables: variables,
@@ -77,7 +74,7 @@ export async function fetchGraphQL(operationsDoc, variables, operationName) {
 
 export function extractNameImage(data) {
 
-  const resultado = data.pokemon_v2_pokemon.map(pokemon => {
+  const resultado = data?.pokemon_v2_pokemon?.map(pokemon => {
     const name = pokemon.name;
     const url = pokemon.pokemon_v2_pokemonsprites[0].sprites.other.home.front_default;
 
