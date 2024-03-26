@@ -1,11 +1,17 @@
 # How to Reproduce 
 
-![image](https://github.com/web-infra-dev/modern.js/assets/11010338/c98f295c-ca25-4840-a6bc-dd3b21cc4fa4)
 
-1. Install all packages by running `pnpm install` in the `dashboard`, `Table`, and `Master app` folders.
+The project works normally in development mode `yarn dev`, but when trying to compile to deploy it gives the following error.
 
-2. Use the `pnpm dev` command in these folders to run the projects.
+![image](https://github.com/rogerlpl/modernjs-discussions/assets/11010338/1c259bae-7534-4c46-8ff7-67826a2aa583)
 
-3. In the main application, either follow the first link or navigate to the `/table` route.
+
+1. Install all packages by running `yarn` in the main folder.
+
+2. Use the `yarn build` command in this folders to run the projects.
+
+3. The error shown in the image above will appear in the console.
+
+
 
 
